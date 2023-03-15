@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link type="text/css" href="{{ url_for('static', filename='css/styles.css')}}" rel="stylesheet" />
+	<title>Controller temperatures</title>
+</head>
+<body>
+<div>
+	<div class="Info">
+		<div>
+			<h4 id="date_time">Последнее обновление данных:{{date_time}}<h4>
+		</div>
+		<div>
+			<h4 id="temperature">Тепмператруа:{{temperature}}<h4>
+		</div>
+		<div>
+			<h4 id="humidity">Влажность:{{humidity}}<h4>
+		</div>
+	</div>
+
+	<div class="Option">
+		<form method="post">
+			<div>
+				<label>Выключить кондиционер:</label>
+				<label class="switch">
+					<input type="checkbox" />
+					<span class="slider round"></span>
+				</label>
+			</div>
+			<div>
+				<label>Оптимальная температура:<label>
+				<input type="number" step="1" min="0" max="50" value="20" id="optional_temperature" name="optional_temperature"/>
+			</div>
+		</form>
+	</div>
+</div>
+<script type=text/javascript src="{{ url_for('static', filename='js/jquery-3.6.3.min.js') }}"></script>
+<script>
+	setInterval(function()
+	{
+		$('#date_time').load(document.URL + ' #date_time')
+		$('#temperature').load(document.URL + ' #temperature')
+		$('#humidity').load(document.URL + ' #humidity')
+	}, 1000)
+</script>
+</body>
+</html>
