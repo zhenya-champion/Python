@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="cb8b9dee-ec47-4327-8e2b-65e24fe4d1ca" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -7,9 +10,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="38tBhdLXJfTjaqgaw97mNUabYnq" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -20,9 +23,17 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "ignore.virus.scanning.warn.message": "true"
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "H:/GitHub/Python/CameraOpenCV/images"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\GitHub\Python\CameraOpenCV\images" />
+      <recent name="H:\GitHub\Python\CameraOpenCV\videos" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
