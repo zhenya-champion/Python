@@ -1,7 +1,11 @@
 import cv2
 import numpy as np
+import imutils
+import easyocr
+from matplotlib import pyplot as pl
 
 #Распознавание номерных знаков и их чтение
+
 
 #Распознавание лиц
 # img = cv2.imread('images/people_2.jpg')
