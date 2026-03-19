@@ -1,6 +1,21 @@
 import cv2
+import logging
+import glob
+import os
+import time
+from datetime import datetime
 
-#Распознавание лиц
+# #Распознавание лиц
+
+# Настройка лога
+log_filename = f'face_detection_{datetime.now().strftime("%Y%m%d_%H%M%S")}.log'
+logging.basicConfig(
+    filename=log_filename,
+    level=logging.INFO,
+    format='%(asctime)s - %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S'
+)
+
 img = cv2.imread('images/013933.jpg')
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
