@@ -15,6 +15,7 @@ logging.basicConfig(
     format='%(asctime)s - %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S'
 )
+
 def process_image(filename):
     img = cv2.imread(filename)
     if img is None:
@@ -31,14 +32,4 @@ def process_image(filename):
     os.makedirs("output", exist_ok=True)
     output_path = f"output/{os.path.basename(filename)}"
     cv2.imwrite(output_path, img)
-
     return filename, len(faces), faces
-
-img = cv2.imread('images/013933.jpg')
-gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-
-face = cv2.CascadeClassifier('face.xml')
-result = face.detectMultiScale(gray, scaleFactor=1.03, minNeighbors=5) #координаты найденых объектов
-
-cv2.imshow('Result', img)
-cv2.waitKey(0)
