@@ -50,20 +50,6 @@ final_image = cv2.rectangle(img, (x1, x2), (y1, y2), (0, 255, 0), 2)
 pl.imshow(cv2.cvtColor(final_image, cv2.COLOR_BGR2RGB))
 pl.show()
 
-#Распознавание лиц
-# img = cv2.imread('images/people_2.jpg')
-# gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-#
-# face = cv2.CascadeClassifier('face.xml')
-# result = face.detectMultiScale(gray, scaleFactor=1.03, minNeighbors=5) #координаты найденых объектов
-#
-# for(x, y, w, h) in result:
-#     cv2.rectangle(img, (x, y), (x + w, y + h), (0, 0, 255), thickness=3)
-#
-# cv2.imshow('Result', img)
-# cv2.waitKey(0)
-
-
 #создаем матрицу(изображение) со значениями 0
 #photo = np.zeros((300, 300, 3), dtype='uint8')
 
