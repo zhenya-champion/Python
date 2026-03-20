@@ -42,7 +42,7 @@ def main():
         return
 
     total_count = len(image_files)
-    print(f"Обработка {total_count} фото...")
+    print(f"Обработка {total_count} фото!")
     start_time = time.time()
     total_faces = 0
     logging.info(f"Старт: {total_count} фото")
