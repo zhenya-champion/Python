@@ -8,7 +8,7 @@ from datetime import datetime
 #Распознавание лиц
 
 #настройка лога
-log_filename = f'face_detection_{datetime.now().strftime("%Y%m%d_%H%M%S")}.log'
+log_filename = f'face_200_{datetime.now().strftime("%Y%m%d_%H%M%S")}.log'
 logging.basicConfig(
     filename=log_filename,
     level=logging.INFO,
