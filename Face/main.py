@@ -55,7 +55,7 @@ def main():
         print(f"\r {i}/{total_count} ({progress:.1f}%) | Лиц: {total_faces} | {filename_short}", end="")
         logging.info(f"{i:3d}. {filename_short}: {num_faces} лиц")
         for j, (x, y, w, h) in enumerate(coords):
-            logging.info(f"   Лицо {j + 1}: x={x}, y={y}, w={w}, h={h}")
+            logging.info(f"Лицо {j + 1}: x={x}, y={y}, w={w}, h={h}")
 
     elapsed = time.time() - start_time
     print(f"\nГотово за {elapsed:.1f}с ({elapsed / 60:.1f}мин)")
