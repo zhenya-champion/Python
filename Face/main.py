@@ -8,15 +8,15 @@ from datetime import datetime
 #Распознавание лиц
 
 #настройка лога
-log_filename = f'face_200_{datetime.now().strftime("%Y%m%d_%H%M%S")}.log'
+LogFile = f'face_200_{datetime.now().strftime("%Y%m%d_%H%M%S")}.log'
 logging.basicConfig(
-    filename=log_filename,
+    filename=LogFile,
     level=logging.INFO,
     format='%(asctime)s - %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S'
 )
 
-def process_image(filename):
+def LoadImage(filename):
     img = cv2.imread(filename)
     if img is None:
         logging.error(f"Не найдено: {filename}")
@@ -49,7 +49,7 @@ def main():
 
     for i, filename in enumerate(image_files, 1):
         filename_short = os.path.basename(filename)
-        filename_result, num_faces, coords = process_image(filename)
+        filename_result, num_faces, coords = LoadImage(filename)
         total_faces += num_faces
         progress = i / total_count * 100
         print(f"\r {i}/{total_count} ({progress:.1f}%) | Лиц: {total_faces} | {filename_short}", end="")
@@ -61,7 +61,7 @@ def main():
     print(f"\nГотово за {elapsed:.1f}с ({elapsed / 60:.1f}мин)")
     print(f"Всего: {total_faces} из {total_count} файлов")
     print(f"Результат: папка output/")
-    print(f"Лог: {log_filename}")
+    print(f"Лог: {LogFile}")
 
 if __name__ == "__main__":
     main()
